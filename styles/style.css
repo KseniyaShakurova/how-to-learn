@@ -39,7 +39,6 @@
   font-size: 102px;
   font-weight: 600;
   z-index: 2;
-  /*Установили параметры для основного заголовка*/
 }
 
 .header__subtitle {
@@ -56,6 +55,7 @@
 
 .header__link {
   color: #2f80ed;
+  text-decoration: none;
 }
 
 .header__main-illustration {
@@ -83,20 +83,18 @@
   justify-content: center;
   padding: 0;
   margin: 100px 0;
-  /*флэкс для секции*/
 }
 
 .two-columns {
-  max-width: 80%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   margin: 0;
   padding: 0;
-
 }
 
 .two-columns__brief {
-  min-width: 175px;
+  width: 175px;
   font-size: 18px;
   color: #2f80ed;
   margin: 0;
@@ -106,9 +104,12 @@
 }
 
 .two-columns__main-text {
-  max-width: 80%;
+  width: 80%;
   min-width: 784px;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .two-columns__paragraph {
@@ -117,11 +118,6 @@
   padding: 0;
   font-weight: normal;
   margin: 0;
-}
-
-.two-columns__paragraph + .two-columns__paragraph {
-  margin-top: 30px;
-  /*задали верхний отступ только для нужных детей*/
 }
 
 .two-columns__span-accent {
@@ -135,11 +131,10 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 100px;
-  /*флэкс для секции*/
 }
 
 .table {
-  max-width: 1100px;
+  width: 1100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -151,7 +146,6 @@
   list-style: none;
   margin: 60px 0 0 0;
   padding: 0;
-  /*задали параметры для ячеек*/
 }
 
 .table__heading {
@@ -168,7 +162,7 @@
 }
 
 .section-title {
-  max-width: 60%;
+  width: 60%;
   line-height: 1.15;
   font-size: 60px;
   font-weight: 600;
@@ -178,7 +172,7 @@
 }
 
 .section-subtitle {
-  max-width: 60%;
+  width: 60%;
   margin: 20px 0 0 0;
   text-align: center;
   font-size: 24px;
@@ -198,7 +192,6 @@
   align-items: center;
   padding-top: 100px;
   background-color: #f2f2f2;
-  /* выше установили ограничения для секции */
 }
 
 .feynman__title {
@@ -239,14 +232,13 @@
  flex: 1;
  background-color: #1f1f1f;
  color: white;
- padding-top: 90px;
- /* выше установили ограничения для секции */
+ padding: 90px 0;
 }
 
 .section-title_theme_dark {
  padding: 0;
  z-index: 1;
- padding-bottom: 90px;
+ margin: 0;
 }
 
 .section-subtitle_theme_dark {
@@ -261,7 +253,7 @@
 }
 
 .table__cell_theme_dark {
-  max-width: 200px;
+  width: 200px;
   margin: 80px 0 0 0;
 }
 
@@ -272,13 +264,13 @@
 .kaufman__triangle {
   background-image: url(..//images/kaufman-triangle.svg);
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 877px;
-  height: 877px;
+  background-size: contain;
   position: absolute;
-  z-index: 0;
   top: 0;
   right: -210px;
+  width: 877px;
+  height: 877px;
+  z-index: 0;
 }
 
 .footer {
@@ -288,17 +280,20 @@
   background-color: #1f1f1f;
   color: white;
   box-sizing: border-box;
-  /* выше установили ограничения для секции */
 }
 
 .footer__columns {
   display: flex;
-  justify-content: space-around;
-  min-width: 90%;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .footer__author {
   margin: 18px 0 18px 0;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
 }
 
 .footer__column_content_copyright {
@@ -306,7 +301,7 @@
   flex-direction: column;
   justify-content: space-between;
   flex-basis: auto;
-  min-width: 711px;
+  width: 711px;
 }
 
 .logo_place_footer {
@@ -351,5 +346,4 @@
 
 .footer__social-icon {
  margin-right: 10px;
- /*задали отступ для иконки*/
 }
